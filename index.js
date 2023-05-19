@@ -13,7 +13,7 @@ function log(req) {
         'method': req.method,
         'body': req.body
     }
-    console.log(req.body)
+    console.log(data)
     return data
 }
 
