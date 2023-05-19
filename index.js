@@ -1,4 +1,5 @@
 const express = require('express')
+var cors = require('cors')
 const app = express()
 const port = 8000
 
@@ -19,6 +20,7 @@ function log(req) {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
+app.use(cors())
 
 app.all('*', (req, res) => {
     res.send(log(req))
