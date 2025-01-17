@@ -10,9 +10,12 @@ const port = 8000
  */
 function log(req) {
     let data = {
-        'url': req.url,
-        'method': req.method,
-        'body': req.body
+        'status': 'successful',
+        'request': {
+            'url': req.url,
+            'method': req.method,
+            'body': req.body
+        }
     }
     console.log(data)
     return data
